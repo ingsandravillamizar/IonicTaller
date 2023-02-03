@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cuatro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+<ion-card [color]="colorCard" [disabled]="estadoCard" >
+  <ion-card-header>
+    <ion-card-title> {{title.value}} </ion-card-title>
+    <ion-card-subtitle>{{subTitle.value}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{content.value}}
+    <ion-item>
+      <ion-label position = "floating" >Header</ion-label>
+      <ion-input  #title    type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position = "floating">SubHeader</ion-label>
+      <ion-input #subTitle  type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position = "floating">Content</ion-label>
+      <ion-input #content  type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position = "floating">Indique ruta de Imágen</ion-label>
+      <ion-input [(ngModel)]="ruta"  type="text"></ion-input>
+      <ion-img *ngIf="ruta!=''" [src]="'assets/logo.png'"></ion-img>
+    </ion-item>
+    
+  </ion-card-content>
+ 
+</ion-card>
+<ion-item>    
+  <ion-label >Inhabilitar </ion-label>
+  <ion-toggle color="success" [(ngModel)]="tooggleValor" (ionChange)="inhabilitarCard()" ></ion-toggle>  
+</ion-item>
+</ion-content>

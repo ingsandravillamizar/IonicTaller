@@ -1,0 +1,26 @@
+ <ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido a Mi Hoja de Vida..</ion-title>
+    
+     
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-card button color="light">
+    <ion-img [src]="'assets/imagen.png'"></ion-img>
+    <ion-card-header>
+      <ion-card-title>Sandra Milena Villamizar Suárez</ion-card-title>
+        <ion-card-subtitle>Ingeniera de Sistemas</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+       15 años de Experiencia en Desarrollo de software: aplicaciones de escritorio
+       Actualmente estudiante desarrollo web y mobile
+    </ion-card-content>
+  </ion-card>
+  <ion-button [routerLink]="['/tabs']" expand="block"  shape="round">
+    Mas Detalles..
+  </ion-button>
+</ion-content>
