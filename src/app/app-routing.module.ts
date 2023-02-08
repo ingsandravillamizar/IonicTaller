@@ -15,15 +15,9 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
-  },
-  {
-    path: 'tres',
-    loadChildren: () => import('./tres/tres.module').then( m => m.TresPageModule)
-  },
-  {
-    path: 'cuatro',
-    loadChildren: () => import('./cuatro/cuatro.module').then( m => m.CuatroPageModule)
-  },
+  }
+
+  // Las rutas 3 y cuatro las quito porque no las voy a acceder desde aqui sino desde tabs
 ];
 
 @NgModule({

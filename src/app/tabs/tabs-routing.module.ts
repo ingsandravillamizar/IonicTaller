@@ -5,7 +5,7 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children:
     [
@@ -18,14 +18,15 @@ const routes: Routes = [
          path: 'ruta-cuatro',
          loadChildren: () =>
          import('../cuatro/cuatro.module').then(m => m.CuatroPageModule)
-       }
+       },
+       {
+        path: '',
+        redirectTo: 'ruta-tres',
+        pathMatch: 'full'
+      }
     ]
   },
-  {
-    path: '',
-    redirectTo: 'tabs/ruta-tres',
-    pathMatch: 'full'
-  }
+  
 ];
 
 @NgModule({
